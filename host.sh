@@ -5,8 +5,8 @@
 ##  v1.0 - 12 September 2016
 ##
 
-CURRENT_IP="$(dig +short percy.oakland.lawrencelatif.com)"
-RECORDED_IP="$(cat /home/oakddns/oakland_ip.txt)"
+CURRENT_IP="$(dig +short HOME_SERVER_HOSTNAME)"
+RECORDED_IP="$(cat LOCATION_OF_IP_ADDRESS)"
 
 ### domain settings
 DOMAIN="DOMAIN_NAME"
