@@ -25,7 +25,7 @@ EMAIL_BODY="The dynamic DNS for $SUBDOMAIN.$DOMAIN has been updated. It now reso
     /usr/local/psa/bin/dns -d "$DOMIAN" -a "$SUBDOMAIN" -ip "$CURRENT_IP"
     /usr/local/psa/bin/dns -a "$DOMAIN" -a "$SUBDOMAIN" -ip "$RECORDED_IP"
 
-    NEW_RESOLVED_IP="$(dig +short percy.oakland.lawrencelatif.com)"
+    NEW_RESOLVED_IP="$(dig +short $SUBDOMAIN.$DOMAIN)"
 
     if [ "$RECORDED_IP" == "$NEW_RESOLVED_IP" ]; then
 
